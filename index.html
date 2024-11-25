@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" type="image/x-icon" href="assets/images/favicon.png"> -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Project</title>
+  </head>
+  <header>
+  </header>
+  <body>
+    <div class="profilebox">
+      <img src="assets/images/Elon_Musk.jpg" class="pfp">
+    </div>
+    <h1>Spend Elon Musk's Money</h1>
+
+    <!-- Falls JavaScript aus ist -->
+    <noscript>
+      <h1 style="color: crimson;">JavaScript deaktiviert!</h1>
+      <p style="text-align: center;">
+        In Ihrem Browser ist JavaScript deaktiviert. Somit werden einige Bestandteile der Webseite nicht funktionieren.
+      </p>
+    </noscript>
+
+    <!-- Geld Anzeige-->
+    <div class="money_bar">
+        <h2 id="money">$300000000000</h2>
+    </div>
+
+    <!-- Grid und deren Items-->
+    <div class="grid_container">
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/cookie.png">
+          </div>
+          <p style="margin-bottom: 0;">Cookie</p>
+          <p class="cost">$2</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(2)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(2)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/hamburger.png">
+          </div>
+          <p style="margin-bottom: 0;">Hamburger</p>
+          <p class="cost">$3</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(3)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(3)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/mario.png">
+          </div>
+          <p style="margin-bottom: 0;">Video Game</p>
+          <p class="cost">$80</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(80)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(80)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/GTA_VI.png">
+          </div>
+          <p style="margin-bottom: 0;">GTA VI</p>
+          <p class="cost">$100</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(100)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(100)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/Dior-Sauvage.png">
+          </div>
+          <p style="margin-bottom: 0;">Dior Sauvage</p>
+          <p class="cost">$100</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(100)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(100)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/jordan_4.png">
+          </div>
+          <p style="margin-bottom: 0;">Jordan 4</p>
+          <p class="cost">$210</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(210)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(210)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/apple-airpods-max.png">
+          </div>
+          <p style="margin-bottom: 0;">AirPods Max</p>
+          <p class="cost">$580</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(580)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(580)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/ps5-pro.png">
+          </div>
+          <p style="margin-bottom: 0;">PS5 Pro + Disc Drive</p>
+          <p class="cost">$820</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(820)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(820)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/iPhone_16_Pro_Max.png">
+          </div>
+          <p style="margin-bottom: 0;">iPhone 16 Pro Max</p>
+          <p class="cost">$1.200</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(12000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(1200)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/puppy.png">
+          </div>
+          <p style="margin-bottom: 0;">Puppy</p>
+          <p class="cost">$1.500</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(1500)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(1500)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img class="meow" src="assets/images/kitten_trying_to_swim_in_milk.gif" onmouseover="this.src='assets/images/cat-stare.gif';" onmouseout="this.src='assets/images/kitten_trying_to_swim_in_milk.gif'">
+          </div>
+          <p style="margin-bottom: 0;">Kitten</p>
+          <p class="cost">$1.500</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(1500)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(1500)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/Sony_Alpha-9-III.png">
+          </div>
+          <p style="margin-bottom: 0;">Sony alpha 9 III</p>
+          <p class="cost">$7.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(7000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(7000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/rolex.png">
+          </div>
+          <p style="margin-bottom: 0;">Rolex</p>
+          <p class="cost">$15.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(15000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(15000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/glurak-1st.png">
+          </div>
+          <p style="margin-bottom: 0;">Glurak Holo 1. Edition</p>
+          <p class="cost">$35.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(35000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(35000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/Hasselblad_H6D-400c_Multi-shot.png">
+          </div>
+          <p style="margin-bottom: 0;">Hasselblad H6D-400c Multi-shot</p>
+          <p class="cost">$48.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(48000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(48000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/Jordan_1_High_OG_Chicago_.png">
+          </div>
+          <p style="margin-bottom: 0;">Jordan 1 High OG Chicago (1985)</p>
+          <p class="cost">$50.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(50000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(50000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/ARRI-ALEXA-LF.png">
+          </div>
+          <p style="margin-bottom: 0;">ARRI ALEXA LF</p>
+          <p class="cost">$98.200</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(98200)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(98200)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/cybertruck.png">
+          </div>
+          <p style="margin-bottom: 0;">Cybertruck</p>
+          <p class="cost">$100.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(100000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(100000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/bitcoin.png">
+          </div>
+          <p style="margin-bottom: 0;">Bitcoin</p>
+          <p class="cost">$100.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(100000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(100000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/Private-Island.jpg">
+          </div>
+          <p style="margin-bottom: 0;">Private Island</p>
+          <p class="cost">$500.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(500000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(500000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/Aston_Martin_Vulcan.png">
+          </div>
+          <p style="margin-bottom: 0;">Aston Martin Vulcan</p>
+          <p class="cost">$2.000.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(2000000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(2000000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/Pagani_Huayra.png">
+          </div>
+          <p style="margin-bottom: 0;">Pagani Huayra</p>
+          <p class="cost">$3.400.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(3400000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(3400000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/Super_Bowl.png">
+          </div>
+          <p style="margin-bottom: 0;">Super Bowl commercial</p>
+          <p class="cost">$7.000.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(7000000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(7000000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/Yacht.png">
+          </div>
+          <p style="margin-bottom: 0;">Yacht</p>
+          <p class="cost">$7.500.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(7500000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(7500000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/Ferrari_20SF.png">
+          </div>
+          <p style="margin-bottom: 0;">Formula 1 car</p>
+          <p class="cost">$15.000.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(15000000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(15000000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/Bugatti-Chiron.png">
+          </div>
+          <p style="margin-bottom: 0;">Bugatti La Voiture Noire</p>
+          <p class="cost">$16.000.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(16000000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(16000000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/mansion.jpg">
+          </div>
+          <p style="margin-bottom: 0;">Mansion</p>
+          <p class="cost">$45.000.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(45000000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(45000000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/movie.png">
+          </div>
+          <p style="margin-bottom: 0;">Make a Movie</p>
+          <p class="cost">$100.000.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(100000000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(100000000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/boeing-747.png">
+          </div>
+          <p style="margin-bottom: 0;">Boeing 747</p>
+          <p class="cost">$148.000.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(148000000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(148000000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/skyscraper.png">
+          </div>
+          <p style="margin-bottom: 0;">Skyscraper</p>
+          <p class="cost">$850.000.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(850000000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(850000000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/Mona_Lisa.jpg">
+          </div>
+          <p style="margin-bottom: 0;">Mona Lisa</p>
+          <p class="cost">$896.000.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(896000000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(896000000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/cruise-ship.png">
+          </div>
+          <p style="margin-bottom: 0;">Cruise Ship</p>
+          <p class="cost">$930.000.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(930000000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(930000000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/Spaceshuttle.jpg">
+          </div>
+          <p style="margin-bottom: 0;">Spaceshuttle</p>
+          <p class="cost">$1.500.000.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(1500000000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(1500000000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/Spaceshuttle.jpg">
+          </div>
+          <p style="margin-bottom: 0;">History Supreme Yacht</p>
+          <p class="cost">$4.500.000.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(4500000000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(4500000000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/NFL-logo.png">
+          </div>
+          <p style="margin-bottom: 0;">NFL Team</p>
+          <p class="cost">$6.500.000.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(6500000000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(6500000000)">Buy</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/Spaceshuttle.jpg">
+          </div>
+          <p style="margin-bottom: 0;">Epic Games</p>
+          <p class="cost">$28.700.000.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(28700000000)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(28700000000)">Buy</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="receipt_container">
+        <h2>Receipt</h2>
+        <div class="receipt" style="margin-bottom: 20px;">
+          <table>
+            <tr>
+              <td>Item 1</td>
+              <td>13x</td>
+              <td>$187</td>
+            </tr>
+            <tr>
+              <td>Itemmmmmmmmmmm 1</td>
+              <td>1398x</td>
+              <td>$18798</td>
+            </tr>
+            <tr>
+              <td>Item 100</td>
+              <td>1x</td>
+              <td>$187</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1x</td>
+              <td>$1</td>
+            </tr>
+          </table>
+        </div>
+        <hr style="width: 75%; max-width: 300px;">
+        <div class="receipt" style="margin-top: 20px; margin-bottom: 10px;">
+          <table>
+            <tr>
+              <td>Total</td>
+              <td>$1000000</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+
+<footer>
+   <h4>Site made by Andrej</h4>
+</footer>
+ 
+  </body>
+</html>
+
+<!-- 
+Ideen Items:
+- $2 = Cookies1
+- $3 = Borgor1
+- $80 = Video Game1
+- $100 = GTA VI1
+- $100 = Dior Sauvage1
+- $210 = Jordan 41
+- $580 = AirPods Max1
+- $800 = Playstation 5 Pro + Disc Drive1
+- $1.200 = iPhone 16 Pro Max1
+- $1.500 = Puppy1
+- $1.500 = Kitten1
+- $7.000 = Sony alpha 9 III1
+- $10.000 = Time Square Adx
+- $15.000 = Rolex1
+- $35.000 = Glurak Holo 1. Edition1
+- $48.000 = Hasselblad H6D-400c Multi-shot1
+- $50.000 = Jordan 1 High OG Chicago (1985)1
+- $98.200 = ARRI ALEXA LF1
+- $100.000 = Cybertruck1
+- $100.000 = Bitcoin1
+- $500.000 = Private Island1
+- $2.000.000 = Aston Martin Vulcan1
+- $3.400.000 = Pagani Huayra1
+- $7.000.000 = Super Bowl commercial1
+- $7.500.000 = Yacht1
+- $15.000.000 = Formula 1 Car1
+- $16.000.000 = Bugatti La Voiture Noire
+- $45.000.000 = Mansion 1
+- $100.000.000 = Make a Movie1
+- $148.000.000 = Boeing 7471
+- $210.000.000 = Airbus 380x
+- $850.000.000 = Skyscraper1
+- $896.000.000 = Mona Lisa1
+- $930.000.000 = Cruise Ship1
+- $1.500.000.000 = Spaceshuttle1
+- $4.500.000.000 = History Supreme Yacht
+- $6.500.000.000 = NFL Team1
+- $28.700.000.000 = Epic Games
+-->

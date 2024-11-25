@@ -1,0 +1,212 @@
+/*Smooth Scrolling*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*Background and Fonts*/
+body {
+  background-color: beige;
+  color: black;
+  margin: 25px;
+  margin-bottom: 25px;
+  font-family: Proxima-Soft;
+  font-weight: bold;
+}
+
+/*Fonts*/
+@font-face {
+  font-family: Proxima-Soft;
+  src: url(assets/fonts/proxima-soft.ttf);
+}
+
+@font-face {
+  font-family: RobotoMono;
+  src: url(assets/fonts/RobotoMono-Regular.ttf);
+}
+
+
+
+/*Default Font Size*/
+p {
+  font-size: 14px;
+}
+
+
+/*Profile Box*/
+.profilebox {
+  margin-top: 20px;
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: center;
+  max-width: 325px;
+}
+
+/*Profile Picture*/
+.pfp {
+  width: 125px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.pfp:active {
+  animation: shake 0.2s;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/*Title*/
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.money_bar {
+  background-color: lightgreen;
+  border: solid;
+  border-color: rgb(83, 225, 83);
+  border-width: 3px;
+  width: 100%;
+  height: 75px;
+  align-content: center;
+  position: sticky;
+  top: 20px;
+  bottom: 20px;
+  z-index: 1;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+}
+
+/*Money Count*/
+h2 {
+  text-align: center;
+}
+
+/*Cost of Item*/
+.cost {
+	color: rgb(0, 125, 0);
+}
+
+
+.buttons_container {
+  display: flex;
+  gap: 20px;
+  width: 75%;
+  justify-content: center;
+}
+
+.buy_button {
+	width: 75px;
+	background: linear-gradient(135deg, rgb(0, 179, 74), rgb(0, 230, 118));
+	border-radius: 15px;
+	padding: 10px;
+	border: transparent;
+	box-sizing: border-box;
+	font-size-adjust: 2px;
+	transition: box-shadow .3s;
+}
+
+.buy_button:hover {
+  box-shadow: 0px 0px 15px 2px rgb(0, 210, 0);
+}
+
+
+.sell_button {
+	width: 75px;
+	background: linear-gradient(135deg, rgb(200, 23, 23), rgb(255, 75, 75));
+	border-radius: 15px;
+	padding: 10px;
+	border: transparent;
+	box-sizing: border-box;
+	font-size-adjust: 2px;
+	transition: box-shadow .3s;
+}
+
+.sell_button:hover {
+	box-shadow: 0px 0px 15px 2px rgb(220, 0, 0);
+}
+
+
+.grid_container {
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-auto-rows: max-content;
+  justify-items: center;
+  align-self: center;
+  justify-content: center;
+  display: grid;
+  gap: 10px;
+  margin: 15px;
+}
+
+.item {
+  background-color: lightsteelblue;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.img_container {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.img_container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.receipt_container {
+  align-content: center;
+  background-color: lightgray;
+  width: 90%;
+  max-width: 350px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  border-radius: 15px;
+  font-family: RobotoMono;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.receipt {
+  display: flex;
+  justify-content: center;
+}
+
+/*Credits*/
+h4 {
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 50px;
+  font-size: 10px;
+}
