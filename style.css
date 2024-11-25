@@ -111,6 +111,11 @@ h2 {
   justify-content: center;
 }
 
+/*Text color fix for some browsers*/
+button {
+  color: black;
+}
+
 .buy_button {
 	width: 75px;
 	background: linear-gradient(135deg, rgb(0, 179, 74), rgb(0, 230, 118));
