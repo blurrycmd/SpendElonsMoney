@@ -4,7 +4,7 @@ function buy(cost) {
     if (moneyValue > cost) {
         let newValue = moneyValue - cost;
 
-        if (newValue < 0) {
+        if (newValue <= 0) {
             newValue = 0;
         }
         new Audio("assets/sounds/buy.wav").play();
