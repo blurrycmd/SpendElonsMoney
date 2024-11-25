@@ -7,7 +7,7 @@ function buy(cost) {
         if (newValue < 0) {
             newValue = 0;
         }
-
+        new Audio("assets/sounds/buy.wav").play();
         h2.textContent = "$" + newValue;
     }
 }
