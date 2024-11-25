@@ -1,0 +1,2 @@
+# SpendElonsMoney
+School Project.
