@@ -22,13 +22,10 @@ function buy(price, name) {
 function sell(price, name) {
     const h2 = document.getElementById("money");
     let moneyValue = parseInt(h2.textContent.replace("$", ""), 10);
-    if (moneyValue != 0) {
+    if (items[name] && items[name].count > 0) {
+        items[name].count--;
         h2.textContent = "$" + (moneyValue + price);
-
-        if (items[name] && items[name].count > 0) {
-            items[name].count--;
-            updateReceipt();
-        }
+        updateReceipt();
     }
 }
 
