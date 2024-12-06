@@ -189,6 +189,8 @@ button {
   object-fit: contain;
 }
 
+
+/*Receipt*/
 .receipt_container {
   align-content: center;
   background-color: lightgray;
@@ -212,7 +214,7 @@ button {
 }
 
 table {
-  width: 50%;
+  width: 75%;
   border-collapse: collapse;
 }
 
