@@ -52,6 +52,6 @@ function sell(price, name) {
             container.appendChild(document.createElement("hr"));
             container.innerHTML += `<table><tr><td>TOTAL</td><td> $${totalValue} </td></tr></table>`;
         } else {
-            container.querySelector(".message").style.display = "block";
+            container.innerHTML = `<div class="message">Buy an Item first</div>`;
         }
     }
