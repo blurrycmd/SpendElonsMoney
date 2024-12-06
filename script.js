@@ -10,7 +10,6 @@ function buy(price, name) {
             newValue = 0;
         }
 
-        navigator.vibrate(200);
         new Audio("assets/sounds/buy.wav").play();
         h2.textContent = "$" + newValue;
 
