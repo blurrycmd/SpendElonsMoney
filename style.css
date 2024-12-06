@@ -131,6 +131,14 @@ button {
   box-shadow: 0px 0px 15px 2px rgb(0, 210, 0);
 }
 
+.buy_button.disabled {
+  background: linear-gradient(135deg, hsl(145, 0%, 35%), hsl(151, 0%, 45%));
+}
+
+.buy_button.disabled:hover {
+  box-shadow: none;
+}
+
 
 .sell_button {
 	width: 75px;
@@ -147,6 +155,13 @@ button {
 	box-shadow: 0px 0px 15px 2px rgb(220, 0, 0);
 }
 
+.sell_button.disabled {
+  background: linear-gradient(135deg, hsl(145, 0%, 35%), hsl(151, 0%, 45%));
+}
+
+.sell_button.disabled:hover {
+  box-shadow: none;
+}
 
 .grid_container {
   grid-template-columns: repeat(auto-fit, 300px);

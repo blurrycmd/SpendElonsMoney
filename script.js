@@ -1,9 +1,14 @@
 const items = {}; 
 
-function buy(price, name) {
+function buy(price, name, button) {
     const h2 = document.getElementById("money");
     let moneyValue = parseInt(h2.textContent.replace("$", ""), 10);
     if (moneyValue >= price) {
+        
+        if (button.classList.contains('disabled')) {
+            button.classList.remove('disabled');
+        }
+
         let newValue = moneyValue - price;
 
         if (newValue <= 0) {
@@ -17,15 +22,26 @@ function buy(price, name) {
             items[name].count++;
             updateReceipt();
     }
+    else if (moneyValue < price) {
+        button.classList.add('disabled');
+    }
 }
 
-function sell(price, name) {
+function sell(price, name, button) {
     const h2 = document.getElementById("money");
+    
+    if (button.classList.contains('disabled')) {
+        button.classList.remove('disabled');
+    }
+    
     let moneyValue = parseInt(h2.textContent.replace("$", ""), 10);
     if (items[name] && items[name].count > 0) {
         items[name].count--;
         h2.textContent = "$" + (moneyValue + price);
         updateReceipt();
+    }
+    else {
+        button.classList.add('disabled');
     }
 }
 
