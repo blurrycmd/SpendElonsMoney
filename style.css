@@ -193,7 +193,7 @@ button {
   align-content: center;
   background-color: lightgray;
   width: 90%;
-  max-width: 350px;
+  max-width: 400px;
   margin: auto;
   margin-top: 50px;
   margin-bottom: 100px;
@@ -205,8 +205,39 @@ button {
 
 .receipt {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+}
+
+td:first-child {
+  padding: 8px;
+  text-align: left;
+}
+
+td {
+  padding: 8px;
+  text-align: right;
+}
+
+.message {
+  font-style: italic;
+  color: grey;
+}
+
+hr {
+  margin: 10px 0;
+  border: 1px solid #909090;
+  width: 75%;
+  max-width: 300px;
+}
+
 
 /*Credits*/
 h4 {
