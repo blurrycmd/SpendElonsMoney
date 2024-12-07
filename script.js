@@ -66,7 +66,10 @@ function sell(price, name, button) {
         if (hasItems) {
             container.appendChild(table);
             container.appendChild(document.createElement("hr"));
-            container.innerHTML += `<table><tr><td>TOTAL</td><td> $${totalValue} </td></tr></table>`;
+            container.innerHTML += `<table><tr><td><h3 class="total_price">TOTAL</h3></td><td> <h3 class="total_price">$${totalValue}</h3> </td></tr></table>`;
+            container.appendChild(document.createElement("hr"));
+            container.innerHTML += `<p class="message2">Thank you for shopping.</p>`;
+            container.innerHTML += `<p class="message2">See you soon!</p>`;
         } else {
             container.innerHTML = `<div class="message">Buy an Item first</div>`;
         }
