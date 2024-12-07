@@ -116,6 +116,8 @@ button {
   color: black;
 }
 
+
+/*Buy Button*/
 .buy_button {
 	width: 75px;
 	background: linear-gradient(135deg, rgb(0, 179, 74), rgb(0, 230, 118));
@@ -139,7 +141,7 @@ button {
   box-shadow: none;
 }
 
-
+/*Sell Button*/
 .sell_button {
 	width: 75px;
 	background: linear-gradient(135deg, rgb(200, 23, 23), rgb(255, 75, 75));
@@ -163,6 +165,8 @@ button {
   box-shadow: none;
 }
 
+
+/*Grid && Items*/
 .grid_container {
   grid-template-columns: repeat(auto-fit, 300px);
   grid-auto-rows: max-content;
@@ -206,15 +210,22 @@ button {
 
 
 /*Receipt*/
+.receipt_title {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-size: x-large;
+}
+
 .receipt_container {
   align-content: center;
   background-color: lightgray;
+  border: 2px solid darkgrey;
   width: 100%;
   max-width: 400px;
   margin: auto;
   margin-top: 50px;
   margin-bottom: 100px;
-  border-radius: 15px;
+  border-radius: 12.5px;
   font-family: RobotoMono;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -243,14 +254,26 @@ td {
   text-align: right;
 }
 
+.total_price {
+  font-size: large;
+  margin: 0;
+}
+
 .message {
   font-style: italic;
   color: grey;
 }
 
+.message2 {
+  font-style: italic;
+  color: grey;
+  margin-top: 12.5px;
+  margin-bottom: 0;
+}
+
 hr {
   margin: 10px 0;
-  border: 1px solid #909090;
+  border: 1px dashed #909090;
   width: 80%;
   max-width: 350px;
 }
