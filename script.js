@@ -1,5 +1,6 @@
 const items = {}; 
 
+//Buy Item
 function buy(price, name, button) {
     const h2 = document.getElementById("money");
     let moneyValue = parseInt(h2.textContent.replace("$", ""), 10);
@@ -27,6 +28,7 @@ function buy(price, name, button) {
     }
 }
 
+//Sell Item
 function sell(price, name, button) {
     const h2 = document.getElementById("money");
     
@@ -37,6 +39,7 @@ function sell(price, name, button) {
     let moneyValue = parseInt(h2.textContent.replace("$", ""), 10);
     if (items[name] && items[name].count > 0) {
         items[name].count--;
+        new Audio("assets/sounds/pop.ogg").play();
         h2.textContent = "$" + (moneyValue + price);
         updateReceipt();
     }
@@ -45,32 +48,58 @@ function sell(price, name, button) {
     }
 }
 
-    function updateReceipt() {
-        const container = document.getElementById("receipt-table");
-        container.innerHTML = '';
-        let totalValue = 0;
-        let hasItems = false;
+//Generate Receipt
+function updateReceipt() {
+    const container = document.getElementById("receipt-table");
+    container.innerHTML = '';
+    let totalValue = 0;
+    let hasItems = false;
 
-        const table = document.createElement("table");
+    const table = document.createElement("table");
 
-        for (const [name, data] of Object.entries(items)) {
-            if (data.count > 0) {
-                hasItems = true;
-                const row = document.createElement("tr");
-                row.innerHTML = `<td>${name}</td> <td>${data.count}x</td> <td>$${data.price * data.count}</td>`;
-                table.appendChild(row);
-                totalValue += data.price * data.count;
-            }
-        }
-
-        if (hasItems) {
-            container.appendChild(table);
-            container.appendChild(document.createElement("hr"));
-            container.innerHTML += `<table><tr><td><h3 class="total_price">TOTAL</h3></td><td> <h3 class="total_price">$${totalValue}</h3> </td></tr></table>`;
-            container.appendChild(document.createElement("hr"));
-            container.innerHTML += `<p class="message2">Thank you for shopping.</p>`;
-            container.innerHTML += `<p class="message2">See you soon!</p>`;
-        } else {
-            container.innerHTML = `<div class="message">Buy an Item first</div>`;
+    for (const [name, data] of Object.entries(items)) {
+        if (data.count > 0) {
+            hasItems = true;
+            const row = document.createElement("tr");
+            row.innerHTML = `<td>${name}</td> <td>${data.count}x</td> <td>$${data.price * data.count}</td>`;
+            table.appendChild(row);
+            totalValue += data.price * data.count;
         }
     }
+
+    if (hasItems) {
+        container.appendChild(table);
+        container.appendChild(document.createElement("hr"));
+        container.innerHTML += `<table><tr><td><h3 class="total_price">TOTAL</h3></td><td> <h3 class="total_price">$${totalValue}</h3> </td></tr></table>`;
+        container.appendChild(document.createElement("hr"));
+        container.innerHTML += `<p class="message2">Thank you for shopping.</p>`;
+        container.innerHTML += `<p class="message2">See you soon!</p>`;
+    } else {
+        container.innerHTML = `<div class="message">Buy an Item first</div>`;
+    }
+}
+
+
+//Special Item
+
+let bought = false;
+
+function twitter() {
+    if (!bought) {
+        document.getElementById("twitter").textContent = "X";
+        document.getElementById("twitter_img").src = "assets/images/X_logo.png";
+        new Audio("assets/sounds/twitter-sound.mp3").play();
+        bought = true;
+    }    
+}
+
+//Easter Egg
+function angry() {
+    var image = document.getElementsByClassName("pfp")[0];
+    image.style.filter = "sepia(100%) saturate(500%) hue-rotate(-50deg)";
+    image.classList.add("shake");
+    setTimeout(function() {
+        image.style.filter = null;
+        image.classList.remove("shake");
+    }, 400);
+}

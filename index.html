@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <script src="theme.js" defer></script>
-    <!-- <script src="script.js"></script> -->
     <title>Project</title>
   </head>
   <header>
   </header>
   <body>
     <div class="profilebox">
-      <img src="assets/images/Elon_Musk.jpg" class="pfp">
+      <img src="assets/images/Elon_Musk.jpg" class="pfp" onclick="angry()">
     </div>
     <h1>Spend Elon Musk's Money</h1>
 
@@ -656,6 +655,24 @@
             </a>
           </div>
         </div>
+
+        <div class="item">
+          <div class="img_container">
+            <img src="assets/images/Twitter.png" id="twitter_img">
+          </div>
+          <p style="margin-bottom: 0" id="twitter">Twitter</p>
+          <p class="cost">$44.000.000.000</p>
+
+          <div class="buttons_container">
+            <a>
+              <button class="sell_button" onclick="sell(44000000000, 'Twitter', this)">Sell</button>
+            </a>
+            <a>
+              <button class="buy_button" onclick="buy(44000000000, 'Twitter', this); twitter()">Buy</button>
+            </a>
+          </div>
+        </div>
+
       </div>
 
       <div class="receipt_container">
