@@ -1,3 +1,33 @@
+:root {
+  --item_color: lightsteelblue;
+  --background: beige;
+  --font_color: black;
+  --money_bar_bg: lightgreen;
+  --money_bar_border: rgb(83, 225, 83);
+  --price: rgb(0, 125, 0);
+  --receipt_bg: lightgray;
+  --receipt_border: darkgray;
+  --receipt_hr: #909090;
+  --message: gray;
+  --menu: darkslateblue;
+  --menu_icon: mediumslateblue;
+}
+
+.darkmode {
+  --item_color: darkslateblue;
+  --background: rgb(22, 23, 27);
+  --font_color: lavender;
+  --money_bar_bg: seagreen;
+  --money_bar_border: mediumseagreen;
+  --price: limegreen;
+  --receipt_bg: dimgray;
+  --receipt_border: gray;
+  --receipt_hr: #909090;
+  --message: silver;
+  --menu: darkslateblue;
+  --menu_icon: mediumslateblue;
+}
+
 /*Smooth Scrolling*/
 html {
   scroll-behavior: smooth;
@@ -5,8 +35,8 @@ html {
 
 /*Background and Fonts*/
 body {
-  background-color: beige;
-  color: black;
+  background-color: var(--background);
+  color: var(--font_color);
   margin: 25px;
   margin-bottom: 25px;
   font-family: Proxima-Soft;
@@ -25,10 +55,42 @@ body {
 }
 
 
-
 /*Default Font Size*/
 p {
   font-size: 14px;
+}
+
+
+/*Menu / Theme Switch*/
+#theme-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding: 0;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  background-color: var(--menu);
+  border: none;
+}
+
+#theme-switch svg {
+  fill: var(--menu_icon);
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+  display: flex;
 }
 
 
@@ -77,9 +139,9 @@ h1 {
 }
 
 .money_bar {
-  background-color: lightgreen;
+  background-color: var(--money_bar_bg);
   border: solid;
-  border-color: rgb(83, 225, 83);
+  border-color: var(--money_bar_border);
   border-width: 3px;
   width: 100%;
   height: 75px;
@@ -100,7 +162,7 @@ h2 {
 
 /*Cost of Item*/
 .cost {
-	color: rgb(0, 125, 0);
+	color: var(--price);
 }
 
 
@@ -179,7 +241,7 @@ button {
 }
 
 .item {
-  background-color: lightsteelblue;
+  background-color: var(--item_color);
   width: 100%;
   height: 100%;
   aspect-ratio: 1 / 1;
@@ -214,12 +276,13 @@ button {
   margin-bottom: 30px;
   margin-top: 20px;
   font-size: x-large;
+  text-decoration: underline;
 }
 
 .receipt_container {
   align-content: center;
-  background-color: lightgray;
-  border: 2px solid darkgrey;
+  background-color: var(--receipt_bg);
+  border: 2px solid var(--receipt_border);
   width: 100%;
   max-width: 400px;
   margin: auto;
@@ -261,19 +324,19 @@ td {
 
 .message {
   font-style: italic;
-  color: grey;
+  color: var(--message);
 }
 
 .message2 {
   font-style: italic;
-  color: grey;
+  color: var(--message);
   margin-top: 12.5px;
   margin-bottom: 0;
 }
 
 hr {
   margin: 10px 0;
-  border: 1px dashed #909090;
+  border: 1px dashed var(--receipt_hr);
   width: 80%;
   max-width: 350px;
 }
