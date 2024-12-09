@@ -1,5 +1,12 @@
 const items = {}; 
 
+// This sets every sell button to disabled when the page reloads
+for(let button of document.getElementsByClassName('sell_button')) {
+	if(!button.classList.contains('disabled')) {
+    	button.classList.add('disabled');
+	}
+}
+
 //Buy Item
 function buy(price, name, button) {
     const h2 = document.getElementById("money");
@@ -22,10 +29,23 @@ function buy(price, name, button) {
         if (!items[name]) items[name] = { count: 0, price: price };
             items[name].count++;
             updateReceipt();
+		
+		// Disable button if u broke
+		if(newValue < price) {
+        	button.classList.add('disabled');
+		}
     }
     else if (moneyValue < price) {
         button.classList.add('disabled');
     }
+
+	// Make it sellable again (goes to parent div, finds the sell button and enables it)
+	const parentDiv = button.parentElement.parentElement;
+	for(let element of parentDiv.getElementsByTagName('*')) {
+		if(element.classList.contains('sell_button') && element.classList.contains('disabled')) {
+            element.classList.remove('disabled');
+		}
+	}
 }
 
 //Sell Item
@@ -42,10 +62,23 @@ function sell(price, name, button) {
         new Audio("assets/sounds/pop.ogg").play();
         h2.textContent = "$" + (moneyValue + price);
         updateReceipt();
-    }
+
+		// Disable button if you sold your last one just now
+    	if (items[name] && items[name].count <= 0) {
+        	button.classList.add('disabled');
+    	}
+	}
     else {
         button.classList.add('disabled');
     }
+	
+	// Make it buyable again (goes to parent div, finds the sell button and enables it)
+	const parentDiv = button.parentElement.parentElement;
+	for(let element of parentDiv.getElementsByTagName('*')) {
+		if(element.classList.contains('buy_button') && element.classList.contains('disabled')) {
+            element.classList.remove('disabled');
+		}
+	}
 }
 
 //Generate Receipt
