@@ -11,6 +11,7 @@
   --message: gray;
   --menu: darkslateblue;
   --menu_icon: mediumslateblue;
+  --menu_border: mediumslateblue;
 }
 
 .darkmode {
@@ -26,6 +27,7 @@
   --message: silver;
   --menu: darkslateblue;
   --menu_icon: mediumslateblue;
+  --menu_border: mediumslateblue;
 }
 
 /*Smooth Scrolling*/
@@ -74,7 +76,7 @@ p {
   height: 50px;
   width: 50px;
   background-color: var(--menu);
-  border: none;
+  border: 2px solid var(--menu_border);
 }
 
 #theme-switch svg {
