@@ -10,7 +10,7 @@
   --receipt_hr: #909090;
   --message: gray;
   --menu: darkslateblue;
-  --menu_icon: mediumslateblue;
+  --menu_icon: hsl(249, 80%, 75%);
   --menu_border: mediumslateblue;
 }
 
@@ -26,7 +26,7 @@
   --receipt_hr: #909090;
   --message: silver;
   --menu: darkslateblue;
-  --menu_icon: mediumslateblue;
+  --menu_icon: hsl(249, 80%, 75%);;
   --menu_border: mediumslateblue;
 }
 
