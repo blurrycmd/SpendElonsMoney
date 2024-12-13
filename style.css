@@ -9,7 +9,7 @@
   --receipt_border: darkgray;
   --receipt_hr: #909090;
   --message: gray;
-  --menu: lightsteelblue;
+  --menu: darkslateblue;
   --menu_icon: mediumslateblue;
   --menu_border: mediumslateblue;
 }
@@ -62,6 +62,37 @@ p {
   font-size: 14px;
 }
 
+/*Scroll to home button*/
+.home_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding: 0;
+  bottom: 120px;
+  left: 10px;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  background-color: var(--menu);
+  border: 2px solid var(--menu_border);
+}
+
+/*Scroll to receipt button*/
+.receipt_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding: 0;
+  bottom: 65px;
+  left: 10px;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  background-color: var(--menu);
+  border: 2px solid var(--menu_border);
+}
 
 /*Menu / Theme Switch*/
 #theme-switch {
@@ -297,6 +328,7 @@ button {
 }
 
 .receipt_container {
+  scroll-margin-top: 125px;
   align-content: center;
   background-color: var(--receipt_bg);
   border: 2px solid var(--receipt_border);
