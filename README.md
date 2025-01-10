@@ -1,5 +1,5 @@
 # School Project.
-### https://itscr24.github.io/SpendElonsMoney/
+### https://blurrycmd.github.io/SpendElonsMoney/
 
 There might be issues regarding some sfx not playing. That's because some browsers (for example Chrome) block "3rd party cookies".
 
