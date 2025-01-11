@@ -120,7 +120,7 @@ function sell(price, name, button) {
 	// Make it buyable again (goes to parent div, finds the sell button and enables it)
 	const parentDiv = button.parentElement.parentElement;
 	for (let element of parentDiv.getElementsByTagName('*')) {
-		if (element.classList.contains('buy_button') && element.classList.contains('disabled') && (items[name] && items[name].count > 0)) {
+		if (element.classList.contains('buy_button') && element.classList.contains('disabled') && items[name] && items[name].count >= 0) {
             element.classList.remove('disabled');
 		}
 	}
