@@ -22,6 +22,7 @@ function buy(price, name, button) {
         times = 1;
     } else if (times > 999) {
         inputField.value = 999;
+        times = 999;
     }
 
     let moneyValue = parseInt(h2.textContent.replace("$", ""), 10);
@@ -89,6 +90,7 @@ function sell(price, name, button) {
         times = 1;
     } else if (times > 999) {
         inputField.value = 999;
+        times = 999;
     }
     
     if (button.classList.contains('disabled')) {
