@@ -1,3 +1,5 @@
+// JavaScript for the theme-switch button.
+
 let darkmode = localStorage.getItem("darkmode")
 const themeSwitch = document.getElementById("theme-switch")
 
