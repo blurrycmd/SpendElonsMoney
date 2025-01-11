@@ -26,6 +26,16 @@ function buy(price, name, button) {
 
     let moneyValue = parseInt(h2.textContent.replace("$", ""), 10);
 
+    if (moneyValue < (price * times)) {
+        times = Math.floor(moneyValue / price);
+        inputField.value = times;
+        if (times == 0) {
+            button.classList.add('disabled');
+            inputField.value = 1;
+            times = 1;
+        }
+    }
+
     if (moneyValue >= (price * times)) {
         
         if (moneyValue >= moneyValue - (price * times)) {
@@ -51,9 +61,9 @@ function buy(price, name, button) {
 		if(newValue < (price * times)) {
         	button.classList.add('disabled');
 		}
-    } else if (moneyValue < (price * times)) {
-        button.classList.add('disabled');
     }
+    
+    
 
 	// Make it sellable again (goes to parent div, finds the sell button and enables it)
 	const parentDiv = button.parentElement.parentElement;
@@ -86,6 +96,11 @@ function sell(price, name, button) {
     }
 
     if (items[name] && items[name].count > 0) {
+        if (times > items[name].count) {
+            times = items[name].count;
+            inputField.value = times;
+        }
+        
         items[name].count = items[name].count - (1 * times);
         new Audio("assets/sounds/pop.ogg").play();
         h2.textContent = "$" + (moneyValue + (price * times));
@@ -160,6 +175,15 @@ function twitter(button) {
         times = 1;
     } else if (times > 999) {
         inputField.value = 999;
+    }
+
+    if (moneyValue < (44000000000 * times)) {
+        times = Math.floor(moneyValue / 44000000000);
+        inputField.value = times;
+        if (times == 0) {
+            inputField.value = 1;
+            times = 1;
+        }
     }
 
     if (moneyValue >= (44000000000 * times)) {
