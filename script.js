@@ -20,9 +20,9 @@ function buy(price, name, button) {
     if (times < 1 || isNaN(times)) {
         inputField.value = 1;
         times = 1;
-    } else if (times > 999) {
-        inputField.value = 999;
-        times = 999;
+    } else if (times > 9999) {
+        inputField.value = 9999;
+        times = 9999;
     }
 
     let moneyValue = parseInt(h2.textContent.replace("$", ""), 10);
@@ -88,9 +88,9 @@ function sell(price, name, button) {
     if (times < 1 || isNaN(times)) {
         inputField.value = 1;
         times = 1;
-    } else if (times > 999) {
-        inputField.value = 999;
-        times = 999;
+    } else if (times > 9999) {
+        inputField.value = 9999;
+        times = 9999;
     }
     
     if (button.classList.contains('disabled')) {
@@ -175,8 +175,9 @@ function twitter(button) {
     if (times < 1 || isNaN(times)) {
         inputField.value = 1;
         times = 1;
-    } else if (times > 999) {
-        inputField.value = 999;
+    } else if (times > 9999) {
+        inputField.value = 9999;
+        times = 9999;
     }
 
     if (moneyValue < (44000000000 * times)) {
