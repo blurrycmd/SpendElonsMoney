@@ -1,4 +1,6 @@
-const items = {}; 
+// JavaScript for buying && selling items, creating the receipt and sfx.
+
+items = {};
 
 // This sets every sell button to disabled when the page reloads
 for(let button of document.getElementsByClassName('sell_button')) {
@@ -10,14 +12,29 @@ for(let button of document.getElementsByClassName('sell_button')) {
 //Buy Item
 function buy(price, name, button) {
     const h2 = document.getElementById("money");
+
+    let inputField = button.previousElementSibling;
+
+    let times = parseInt(inputField.value, 10);
+
+    if (times < 1 || isNaN(times)) {
+        inputField.value = 1;
+        times = 1;
+    } else if (times > 999) {
+        inputField.value = 999;
+    }
+
     let moneyValue = parseInt(h2.textContent.replace("$", ""), 10);
-    if (moneyValue >= price) {
+
+    if (moneyValue >= (price * times)) {
         
-        if (button.classList.contains('disabled')) {
-            button.classList.remove('disabled');
+        if (moneyValue >= moneyValue - (price * times)) {
+            if (button.classList.contains('disabled')) {
+                button.classList.remove('disabled');
+            }
         }
 
-        let newValue = moneyValue - price;
+        let newValue = moneyValue - (price * times);
 
         if (newValue <= 0) {
             newValue = 0;
@@ -27,15 +44,14 @@ function buy(price, name, button) {
         h2.textContent = "$" + newValue;
 
         if (!items[name]) items[name] = { count: 0, price: price };
-            items[name].count++;
+            items[name].count = items[name].count + (1 * times);
             updateReceipt();
 		
 		// Disable button if u broke
-		if(newValue < price) {
+		if(newValue < (price * times)) {
         	button.classList.add('disabled');
 		}
-    }
-    else if (moneyValue < price) {
+    } else if (moneyValue < (price * times)) {
         button.classList.add('disabled');
     }
 
@@ -51,16 +67,28 @@ function buy(price, name, button) {
 //Sell Item
 function sell(price, name, button) {
     const h2 = document.getElementById("money");
+
+    let inputField = button.nextElementSibling;
+
+    let times = parseInt(inputField.value, 10);
+
+    let moneyValue = parseInt(h2.textContent.replace("$", ""), 10);
+
+    if (times < 1 || isNaN(times)) {
+        inputField.value = 1;
+        times = 1;
+    } else if (times > 999) {
+        inputField.value = 999;
+    }
     
     if (button.classList.contains('disabled')) {
         button.classList.remove('disabled');
     }
-    
-    let moneyValue = parseInt(h2.textContent.replace("$", ""), 10);
+
     if (items[name] && items[name].count > 0) {
-        items[name].count--;
+        items[name].count = items[name].count - (1 * times);
         new Audio("assets/sounds/pop.ogg").play();
-        h2.textContent = "$" + (moneyValue + price);
+        h2.textContent = "$" + (moneyValue + (price * times));
         updateReceipt();
 
 		// Disable button if you sold your last one just now
@@ -113,16 +141,34 @@ function updateReceipt() {
 }
 
 
-//Special Item
+//Special Items
 
 let bought = false;
 
-function twitter() {
-    if (!bought) {
+function twitter(button) {
+
+    const h2 = document.getElementById("money");
+
+    let moneyValue = parseInt(h2.textContent.replace("$", ""), 10);
+
+    let inputField = button.previousElementSibling;
+
+    let times = parseInt(inputField.value, 10);
+
+    if (times < 1 || isNaN(times)) {
+        inputField.value = 1;
+        times = 1;
+    } else if (times > 999) {
+        inputField.value = 999;
+    }
+
+    if (moneyValue >= (44000000000 * times)) {
+        if (!bought) {
         document.getElementById("twitter").textContent = "X";
         document.getElementById("twitter_img").src = "assets/images/X_logo.png";
         new Audio("assets/sounds/twitter-sound.mp3").play();
         bought = true;
+        }
     }    
 }
 

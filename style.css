@@ -5,6 +5,8 @@
   --money_bar_bg: lightgreen;
   --money_bar_border: rgb(83, 225, 83);
   --price: rgb(0, 125, 0);
+  --input_bg: #313eae;
+  --input_border: navy;
   --receipt_bg: lightgray;
   --receipt_border: darkgray;
   --receipt_hr: #909090;
@@ -21,12 +23,14 @@
   --money_bar_bg: seagreen;
   --money_bar_border: mediumseagreen;
   --price: limegreen;
+  --input_bg: #313eae;
+  --input_border: navy;
   --receipt_bg: dimgray;
   --receipt_border: gray;
   --receipt_hr: #909090;
   --message: silver;
   --menu: darkslateblue;
-  --menu_icon: hsl(249, 80%, 75%);;
+  --menu_icon: hsl(249, 80%, 75%);
   --menu_border: mediumslateblue;
 }
 
@@ -183,9 +187,7 @@ h1 {
 
 .money_bar {
   background-color: var(--money_bar_bg);
-  border: solid;
-  border-color: var(--money_bar_border);
-  border-width: 3px;
+  border: 3px, solid, var(--money_bar_border);
   width: 100%;
   height: 75px;
   align-content: center;
@@ -268,6 +270,25 @@ button {
 
 .sell_button.disabled:hover {
   box-shadow: none;
+}
+
+input {
+  width: 45px;
+  padding: 5px;
+  color: lavender;
+  background-color: var(--input_bg);
+  border: 2px, solid, var(--input_border);
+  border-radius: 5px;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 
