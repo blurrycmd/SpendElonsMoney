@@ -80,6 +80,7 @@ p {
   width: 50px;
   background-color: var(--menu);
   border: 2px solid var(--menu_border);
+  z-index: 2;
 }
 
 /*Scroll to receipt button*/
@@ -96,6 +97,7 @@ p {
   width: 50px;
   background-color: var(--menu);
   border: 2px solid var(--menu_border);
+  z-index: 2;
 }
 
 /*Menu / Theme Switch*/
@@ -112,6 +114,7 @@ p {
   width: 50px;
   background-color: var(--menu);
   border: 2px solid var(--menu_border);
+  z-index: 2;
 }
 
 #theme-switch svg {
