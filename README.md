@@ -1,4 +1,4 @@
-# 🏫 School Project.
+# 🏫 School project.
 
 ## 💸 Buy items from the huge item catalogue with Elon's money!
 
