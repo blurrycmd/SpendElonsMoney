@@ -19,4 +19,4 @@
 - Menu buttons for fast navigation and switching themes.
 - Buy/sell multiple items at once!
 - If you can't buy/sell the number of items you want to buy/sell, it will automatically calculate the maximum for you!
-- Buy Twitter! (Shoutout to @MaxAve) :trollface:
+- Buy Twitter! (Shoutout to [@MaxAve](https://www.github.com/MaxAve)) :trollface:
