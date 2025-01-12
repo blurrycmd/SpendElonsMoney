@@ -7,30 +7,32 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <script src="theme.js" defer></script>
-    <title>Project</title>
+    <script src="animations.js" defer></script>
+    <title>Spend Elon's Money</title>
   </head>
-  <header>
-  </header>
+  
   <body id="home" style="scroll-margin-top: 25px;">
+    
     <div class="profilebox">
       <img src="assets/images/Elon_Musk.jpg" class="pfp" onclick="angry()">
     </div>
+
     <h1>Spend Elon Musk's Money</h1>
 
-    <!-- Falls JavaScript aus ist -->
+    <!-- If JavaScript is turned off -->
     <noscript>
-      <h1 style="color: crimson;">JavaScript deaktiviert!</h1>
+      <h1 style="color: crimson;">JavaScript is turned off!</h1>
       <p style="text-align: center;">
-        In Ihrem Browser ist JavaScript deaktiviert. Somit werden einige Bestandteile der Webseite nicht funktionieren.
+        JavaScript is disabled in your browser settings. Therefore, some parts of this website might not work!.
       </p>
     </noscript>
 
-    <!-- Geld Anzeige-->
+    <!-- Money amount -->
     <div class="money_bar">
         <h2 id="money">$400000000000</h2>
     </div>
 
-    <!--Floating button / Menü-->
+    <!--Floating buttons-->
      <button id="theme-switch" title="Switch Theme">
         <!--Dark Mode Icon-->
         <svg id="icon-dark" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
@@ -58,12 +60,12 @@
         </button>
      </a>
 
-    <!-- Grid und deren Items-->
+    <!-- Grid and their items-->
     <div class="grid_container">
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/cookie.png">
+            <img src="assets/images/items/cookie.png">
           </div>
           <p style="margin-bottom: 0;">Cookie</p>
           <p class="cost">$2</p>
@@ -76,7 +78,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/hamburger.png" onmouseover="this.src='assets/images/borgor.jpg'; this.style.transform='scale(2)';" onmouseout="this.src='assets/images/hamburger.png'; this.style.transform='scale(1)';">
+            <img src="assets/images/items/hamburger.png" onmouseover="this.src='assets/images/onhover/borgor.jpg'; this.style.transform='scale(2)';" onmouseout="this.src='assets/images/items/hamburger.png'; this.style.transform='scale(1)';">
           </div>
           <p style="margin-bottom: 0;">Burger</p>
           <p class="cost">$3</p>
@@ -89,7 +91,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Doener.png">
+            <img src="assets/images/items/Doener.png">
           </div>
           <p style="margin-bottom: 0;">Döner</p>
           <p class="cost">$8</p>
@@ -102,7 +104,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/GalvanizedSquareSteel.png">
+            <img src="assets/images/items/GalvanizedSquareSteel.png">
           </div>
           <p style="margin-bottom: 0;">Galvanized Square Steel</p>
           <p class="cost">$10</p>
@@ -115,7 +117,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/mario.png">
+            <img src="assets/images/items/mario.png">
           </div>
           <p style="margin-bottom: 0;">Video Game</p>
           <p class="cost">$80</p>
@@ -128,7 +130,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/GTA_VI.png">
+            <img src="assets/images/items/GTA_VI.png">
           </div>
           <p style="margin-bottom: 0;">GTA VI</p>
           <p class="cost">$100</p>
@@ -141,7 +143,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Dior-Sauvage.png">
+            <img src="assets/images/items/Dior-Sauvage.png">
           </div>
           <p style="margin-bottom: 0;">Dior Sauvage</p>
           <p class="cost">$100</p>
@@ -154,7 +156,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/JPG_LM_EDP.png">
+            <img src="assets/images/items/JPG_LM_EDP.png">
           </div>
           <p style="margin-bottom: 0;">Jean Paul Gaultier Le Male</p>
           <p class="cost">$142</p>
@@ -167,7 +169,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Windows-11-Pro-Retail.png">
+            <img src="assets/images/items/Windows-11-Pro-Retail.png">
           </div>
           <p style="margin-bottom: 0;">Windows 11 License</p>
           <p class="cost">$200</p>
@@ -180,7 +182,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/jordan_4.png">
+            <img src="assets/images/items/jordan_4.png">
           </div>
           <p style="margin-bottom: 0;">Jordan 4</p>
           <p class="cost">$210</p>
@@ -193,7 +195,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/apple-airpods-max.png">
+            <img src="assets/images/items/apple-airpods-max.png">
           </div>
           <p style="margin-bottom: 0;">AirPods Max</p>
           <p class="cost">$580</p>
@@ -206,7 +208,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Adobe_Creative_Cloud.png">
+            <img src="assets/images/items/Adobe_Creative_Cloud.png">
           </div>
           <p style="margin-bottom: 0;">1 Year Adobe Creative Cloud</p>
           <p class="cost">$768</p>
@@ -219,7 +221,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/ps5-pro.png">
+            <img src="assets/images/items/ps5-pro.png">
           </div>
           <p style="margin-bottom: 0;">PS5 Pro + Disc Drive</p>
           <p class="cost">$820</p>
@@ -232,7 +234,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/iPhone_16_Pro_Max.png">
+            <img src="assets/images/items/iPhone_16_Pro_Max.png">
           </div>
           <p style="margin-bottom: 0;">iPhone 16 Pro Max</p>
           <p class="cost">$1.200</p>
@@ -245,7 +247,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/puppy.png">
+            <img src="assets/images/items/puppy.png">
           </div>
           <p style="margin-bottom: 0;">Puppy</p>
           <p class="cost">$1.500</p>
@@ -258,7 +260,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img class="meow" src="assets/images/kitten_trying_to_swim_in_milk.gif" onmouseover="this.src='assets/images/cat-stare.gif';" onmouseout="this.src='assets/images/kitten_trying_to_swim_in_milk.gif'">
+            <img class="meow" src="assets/images/items/kitten_trying_to_swim_in_milk.gif" onmouseover="this.src='assets/images/onhover/cat-stare.gif';" onmouseout="this.src='assets/images/items/kitten_trying_to_swim_in_milk.gif'">
           </div>
           <p style="margin-bottom: 0;">Kitten</p>
           <p class="cost">$1.500</p>
@@ -271,7 +273,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/RTX-5090.png">
+            <img src="assets/images/items/RTX-5090.png">
           </div>
           <p style="margin-bottom: 0;">RTX 5090</p>
           <p class="cost">$2000</p>
@@ -284,7 +286,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Sony_Alpha-9-III.png">
+            <img src="assets/images/items/Sony_Alpha-9-III.png">
           </div>
           <p style="margin-bottom: 0;">Sony alpha 9 III</p>
           <p class="cost">$7.000</p>
@@ -297,7 +299,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/rolex.png">
+            <img src="assets/images/items/rolex.png">
           </div>
           <p style="margin-bottom: 0;">Rolex</p>
           <p class="cost">$15.000</p>
@@ -310,7 +312,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/glurak-1st.png">
+            <img src="assets/images/items/glurak-1st.png">
           </div>
           <p style="margin-bottom: 0;">Glurak Holo 1. Edition</p>
           <p class="cost">$35.000</p>
@@ -323,7 +325,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Hasselblad_H6D-400c_Multi-shot.png">
+            <img src="assets/images/items/Hasselblad_H6D-400c_Multi-shot.png">
           </div>
           <p style="margin-bottom: 0;">Hasselblad H6D-400c Multi-shot</p>
           <p class="cost">$48.000</p>
@@ -336,7 +338,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Jordan_1_High_OG_Chicago_.png">
+            <img src="assets/images/items/Jordan_1_High_OG_Chicago_.png">
           </div>
           <p style="margin-bottom: 0;">Jordan 1 High OG Chicago (1985)</p>
           <p class="cost">$50.000</p>
@@ -349,7 +351,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/ARRI-ALEXA-LF.png">
+            <img src="assets/images/items/ARRI-ALEXA-LF.png">
           </div>
           <p style="margin-bottom: 0;">ARRI ALEXA LF</p>
           <p class="cost">$98.200</p>
@@ -362,7 +364,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/cybertruck.png">
+            <img src="assets/images/items/cybertruck.png">
           </div>
           <p style="margin-bottom: 0;">Cybertruck</p>
           <p class="cost">$100.000</p>
@@ -375,7 +377,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/bitcoin.png">
+            <img src="assets/images/items/bitcoin.png">
           </div>
           <p style="margin-bottom: 0;">Bitcoin</p>
           <p class="cost">$100.000</p>
@@ -388,7 +390,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Private-Island.jpg">
+            <img src="assets/images/items/Private-Island.jpg">
           </div>
           <p style="margin-bottom: 0;">Private Island</p>
           <p class="cost">$500.000</p>
@@ -401,7 +403,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Aston_Martin_Vulcan.png">
+            <img src="assets/images/items/Aston_Martin_Vulcan.png">
           </div>
           <p style="margin-bottom: 0;">Aston Martin Vulcan</p>
           <p class="cost">$2.000.000</p>
@@ -414,7 +416,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Pagani_Huayra.png">
+            <img src="assets/images/items/Pagani_Huayra.png">
           </div>
           <p style="margin-bottom: 0;">Pagani Huayra</p>
           <p class="cost">$3.400.000</p>
@@ -427,7 +429,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Super_Bowl.png">
+            <img src="assets/images/items/Super_Bowl.png">
           </div>
           <p style="margin-bottom: 0;">Super Bowl commercial</p>
           <p class="cost">$7.000.000</p>
@@ -440,7 +442,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Yacht.png">
+            <img src="assets/images/items/Yacht.png">
           </div>
           <p style="margin-bottom: 0;">Yacht</p>
           <p class="cost">$7.500.000</p>
@@ -453,7 +455,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Ferrari_20SF.png">
+            <img src="assets/images/items/Ferrari_20SF.png">
           </div>
           <p style="margin-bottom: 0;">Formula 1 car</p>
           <p class="cost">$15.000.000</p>
@@ -466,7 +468,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Bugatti-Chiron.png">
+            <img src="assets/images/items/Bugatti-Chiron.png">
           </div>
           <p style="margin-bottom: 0;">Bugatti La Voiture Noire</p>
           <p class="cost">$16.000.000</p>
@@ -479,7 +481,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/mansion.jpg">
+            <img src="assets/images/items/mansion.jpg">
           </div>
           <p style="margin-bottom: 0;">Mansion</p>
           <p class="cost">$45.000.000</p>
@@ -492,7 +494,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/movie.png">
+            <img src="assets/images/items/movie.png">
           </div>
           <p style="margin-bottom: 0;">Make a Movie</p>
           <p class="cost">$100.000.000</p>
@@ -505,7 +507,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/boeing-747.png">
+            <img src="assets/images/items/boeing-747.png">
           </div>
           <p style="margin-bottom: 0;">Boeing 747</p>
           <p class="cost">$148.000.000</p>
@@ -518,7 +520,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/BVB.png">
+            <img src="assets/images/items/BVB.png">
           </div>
           <p style="margin-bottom: 0;">BVB</p>
           <p class="cost">$473.000.000</p>
@@ -531,7 +533,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/skyscraper.png">
+            <img src="assets/images/items/skyscraper.png">
           </div>
           <p style="margin-bottom: 0;">Skyscraper</p>
           <p class="cost">$850.000.000</p>
@@ -544,7 +546,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Mona_Lisa.jpg">
+            <img src="assets/images/items/Mona_Lisa.jpg">
           </div>
           <p style="margin-bottom: 0;">Mona Lisa</p>
           <p class="cost">$896.000.000</p>
@@ -557,7 +559,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/cruise-ship.png">
+            <img src="assets/images/items/cruise-ship.png">
           </div>
           <p style="margin-bottom: 0;">Cruise Ship</p>
           <p class="cost">$930.000.000</p>
@@ -570,7 +572,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Spaceshuttle.jpg">
+            <img src="assets/images/items/Spaceshuttle.jpg">
           </div>
           <p style="margin-bottom: 0;">Spaceshuttle</p>
           <p class="cost">$1.500.000.000</p>
@@ -583,7 +585,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/history-supreme-yacht.jpg">
+            <img src="assets/images/items/history-supreme-yacht.jpg">
           </div>
           <p style="margin-bottom: 0;">History Supreme Yacht</p>
           <p class="cost">$4.500.000.000</p>
@@ -596,7 +598,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/NFL-logo.png">
+            <img src="assets/images/items/NFL-logo.png">
           </div>
           <p style="margin-bottom: 0;">NFL Team</p>
           <p class="cost">$6.500.000.000</p>
@@ -609,7 +611,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Epic_Games.png">
+            <img src="assets/images/items/Epic_Games.png">
           </div>
           <p style="margin-bottom: 0;">Epic Games</p>
           <p class="cost">$28.700.000.000</p>
@@ -622,7 +624,7 @@
 
         <div class="item">
           <div class="img_container">
-            <img src="assets/images/Twitter.png" id="twitter_img">
+            <img src="assets/images/items/Twitter.png" id="twitter_img">
           </div>
           <p style="margin-bottom: 0" id="twitter">Twitter</p>
           <p class="cost">$44.000.000.000</p>
@@ -637,13 +639,13 @@
       <div class="receipt_container" id="receipt">
         <h2 class="receipt_title">Receipt</h2>
         <div class="receipt" id="receipt-table" style="margin-bottom: 20px;">
-          <div class="message">Buy an Item first</div>
+          <div class="message">Buy an item first</div>
         </div>
       </div>
   </body>
 
   <footer>
    <h4>Site made by Andrej</h4>
-</footer>
+  </footer>
 
 </html>
