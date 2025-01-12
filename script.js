@@ -192,20 +192,9 @@ function twitter(button) {
     if (moneyValue >= (44000000000 * times)) {
         if (!bought) {
         document.getElementById("twitter").textContent = "X";
-        document.getElementById("twitter_img").src = "assets/images/X_logo.png";
+        document.getElementById("twitter_img").src = "assets/images/items/X_logo.png";
         new Audio("assets/sounds/twitter-sound.mp3").play();
         bought = true;
         }
     }    
-}
-
-//Easter Egg
-function angry() {
-    var image = document.getElementsByClassName("pfp")[0];
-    image.style.filter = "sepia(100%) saturate(500%) hue-rotate(-50deg)";
-    image.classList.add("shake");
-    setTimeout(function() {
-        image.style.filter = null;
-        image.classList.remove("shake");
-    }, 400);
 }

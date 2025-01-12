@@ -100,7 +100,7 @@ p {
   z-index: 2;
 }
 
-/*Menu / Theme Switch*/
+/*Theme Switch*/
 #theme-switch {
   display: flex;
   justify-content: center;
@@ -289,6 +289,7 @@ input:focus {
   outline: none;
 }
 
+/*Hide input spin buttons*/
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
