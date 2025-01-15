@@ -96,13 +96,16 @@ p {
   display: none;
 }
 
-.receipt_btn.hidden {
+
+/*Hide buttons until menu is open*/
+#home_btn.hidden {
   display: none;
 }
 
-.home_btn.hidden {
+#receipt_btn.hidden {
   display: none;
 }
+
 
 #theme-switch.hidden {
   display: none;
