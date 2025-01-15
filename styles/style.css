@@ -40,7 +40,7 @@
 
 /*Smooth theme transition*/
 * {
-  transition: color .1s, background-color .75s ease-in-out, border .75s ease-in-out, border-color .75s ease-in-out;
+  transition: color .15s, background-color .75s ease-in-out, border .75s ease-in-out, border-color .75s ease-in-out;
 }
 
 
