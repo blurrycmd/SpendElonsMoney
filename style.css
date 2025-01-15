@@ -81,45 +81,47 @@ p {
   width: 50px;
   background-color: var(--menu);
   border: 2px solid var(--menu_border);
-  z-index: 2;
+  z-index: 5;
 }
 
-#menu_btn svg:first-child {
+#menu-icon {
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+#close-icon {
   display: none;
-}
-
-#menu_btn.hidden svg:first-child {
-  display: flex;
-}
-
-#menu_btn.hidden svg:last-child {
-  display: none;
+  opacity: 0;
+  transition: opacity .5s;
 }
 
 
 /*Hide buttons until menu is open*/
 #home_btn.hidden {
   display: none;
+  opacity: 0;
 }
 
 #receipt_btn.hidden {
   display: none;
+  opacity: 0;
 }
 
 
 #theme-switch.hidden {
   display: none;
+  opacity: 0;
 }
 
 
 /*Scroll to home button*/
 .home_btn {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: fixed;
   padding: 0;
-  bottom: 175px;
+  bottom: 10px;
   left: 10px;
   border-radius: 50px;
   height: 50px;
@@ -127,41 +129,44 @@ p {
   background-color: var(--menu);
   border: 2px solid var(--menu_border);
   z-index: 2;
+  transition: bottom 0.5s, opacity 0.25s;
 }
 
 
 /*Scroll to receipt button*/
 .receipt_btn {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: fixed;
   padding: 0;
-  bottom: 120px;
+  bottom: 10px;
   left: 10px;
   border-radius: 50px;
   height: 50px;
   width: 50px;
   background-color: var(--menu);
   border: 2px solid var(--menu_border);
-  z-index: 2;
+  z-index: 3;
+  transition: bottom 0.5s, opacity 0.25s;
 }
 
 /*Theme Switch*/
 #theme-switch {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: fixed;
   padding: 0;
-  bottom: 65px;
+  bottom: 10px;
   left: 10px;
   border-radius: 50px;
   height: 50px;
   width: 50px;
   background-color: var(--menu);
   border: 2px solid var(--menu_border);
-  z-index: 2;
+  z-index: 4;
+  transition: bottom 0.5s, opacity 0.25s;
 }
 
 #theme-switch svg:last-child {
