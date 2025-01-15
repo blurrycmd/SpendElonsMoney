@@ -1,0 +1,72 @@
+/*CSS for the receipt*/
+
+/*Receipt*/
+.receipt_title {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-size: x-large;
+  text-decoration: underline;
+}
+  
+.receipt_container {
+  scroll-margin-top: 125px;
+  align-content: center;
+  background-color: var(--receipt_bg);
+  border: 2px solid var(--receipt_border);
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  border-radius: 12.5px;
+  font-family: RobotoMono;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.receipt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+table {
+  width: 75%;
+  border-collapse: collapse;
+}
+
+td:first-child {
+  padding: 8px;
+  text-align: left;
+}
+
+td {
+  padding: 8px;
+  text-align: right;
+}
+
+.total_price {
+  font-size: large;
+  margin: 0;
+}
+
+.message {
+  font-style: italic;
+  color: var(--message);
+}
+
+.message2 {
+  font-style: italic;
+  color: var(--message);
+  margin-top: 12.5px;
+  margin-bottom: 0;
+}
+
+hr {
+  margin: 10px 0;
+  border: 1px dashed var(--receipt_hr);
+  width: 80%;
+  max-width: 350px;
+}

@@ -1,0 +1,122 @@
+/*CSS for the menu*/
+
+/*Menu Button*/
+#menu_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding: 0;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  background-color: var(--menu);
+  border: 2px solid var(--menu_border);
+  z-index: 5;
+}
+  
+#menu-icon {
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+#close-icon {
+  display: none;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+
+/*Hide buttons until menu is open*/
+#home_btn.hidden {
+  display: none;
+  opacity: 0;
+}
+
+#receipt_btn.hidden {
+  display: none;
+  opacity: 0;
+}
+
+
+#theme-switch.hidden {
+  display: none;
+  opacity: 0;
+}
+
+
+/*Scroll to home button*/
+.home_btn {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding: 0;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  background-color: var(--menu);
+  border: 2px solid var(--menu_border);
+  z-index: 2;
+  transition: bottom .5s, opacity .25s;
+}
+
+
+/*Scroll to receipt button*/
+.receipt_btn {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding: 0;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  background-color: var(--menu);
+  border: 2px solid var(--menu_border);
+  z-index: 3;
+  transition: bottom .5s, opacity .25s;
+}
+
+/*Theme Switch*/
+#theme-switch {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding: 0;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  background-color: var(--menu);
+  border: 2px solid var(--menu_border);
+  z-index: 4;
+  transition: bottom .5s, opacity .25s;
+}
+
+#icon-dark {
+  display: flex;
+  transition: opacity 1s ease-in-out;
+}
+
+#icon-light {
+  display: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.darkmode #icon-dark {
+  display: none;
+  transition: opacity 1s ease-in-out;
+}
+.darkmode #icon-light {
+  display: flex;
+  transition: opacity 1s ease-in-out;
+}
