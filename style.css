@@ -66,14 +66,15 @@ p {
   font-size: 14px;
 }
 
-/*Scroll to home button*/
-.home_btn {
+
+/*Menu Button*/
+#menu_btn {
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   padding: 0;
-  bottom: 120px;
+  bottom: 10px;
   left: 10px;
   border-radius: 50px;
   height: 50px;
@@ -83,6 +84,49 @@ p {
   z-index: 2;
 }
 
+#menu_btn svg:first-child {
+  display: none;
+}
+
+#menu_btn.hidden svg:first-child {
+  display: flex;
+}
+
+#menu_btn.hidden svg:last-child {
+  display: none;
+}
+
+.receipt_btn.hidden {
+  display: none;
+}
+
+.home_btn.hidden {
+  display: none;
+}
+
+#theme-switch.hidden {
+  display: none;
+}
+
+
+/*Scroll to home button*/
+.home_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding: 0;
+  bottom: 175px;
+  left: 10px;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  background-color: var(--menu);
+  border: 2px solid var(--menu_border);
+  z-index: 2;
+}
+
+
 /*Scroll to receipt button*/
 .receipt_btn {
   display: flex;
@@ -90,7 +134,7 @@ p {
   align-items: center;
   position: fixed;
   padding: 0;
-  bottom: 65px;
+  bottom: 120px;
   left: 10px;
   border-radius: 50px;
   height: 50px;
@@ -107,7 +151,7 @@ p {
   align-items: center;
   position: fixed;
   padding: 0;
-  bottom: 10px;
+  bottom: 65px;
   left: 10px;
   border-radius: 50px;
   height: 50px;
@@ -115,10 +159,6 @@ p {
   background-color: var(--menu);
   border: 2px solid var(--menu_border);
   z-index: 2;
-}
-
-#theme-switch svg {
-  fill: var(--menu_icon);
 }
 
 #theme-switch svg:last-child {
