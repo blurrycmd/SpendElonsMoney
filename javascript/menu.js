@@ -10,7 +10,7 @@ const theme= document.getElementById("theme-switch");
 
 const openMenu = () => {
     menuOpen = true;
-    //menu.classList.toggle('hidden');
+
     setTimeout(() => {
     menuIcon.style.opacity = '0';
     closeIcon.style.opacity = '1';
@@ -44,7 +44,6 @@ const openMenu = () => {
 
 const closeMenu = () => {
     menuOpen = false;
-    //menu.classList.toggle('hidden');
 
     setTimeout(() => {
     closeIcon.style.opacity = '0';
@@ -81,8 +80,3 @@ menu.addEventListener("click", () => {
     menuOpen !== true ? openMenu() : closeMenu();
     console.log(menuOpen);
 } )
-
-//Menu: 10
-//Home: 175
-//Receipt: 120
-//Theme: 55

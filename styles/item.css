@@ -1,0 +1,135 @@
+/*CSS for the item catalogue*/
+
+/*Cost of Item*/
+.cost {
+	color: var(--price);
+}
+
+.buttons_container {
+  display: flex;
+  gap: 20px;
+  width: 75%;
+  justify-content: center;
+}
+
+/*Text color fix for some browsers*/
+button {
+  color: black;
+}
+
+
+/*Buy Button*/
+.buy_button {
+	width: 75px;
+	background: linear-gradient(135deg, rgb(0, 179, 74), rgb(0, 230, 118));
+	border-radius: 15px;
+	padding: 10px;
+	border: transparent;
+	box-sizing: border-box;
+	font-size-adjust: 2px;
+	transition: box-shadow .3s;
+}
+
+.buy_button:hover {
+  box-shadow: 0px 0px 15px 2px rgb(0, 210, 0);
+}
+
+.buy_button.disabled {
+  background: linear-gradient(135deg, hsl(145, 0%, 35%), hsl(151, 0%, 45%));
+}
+
+.buy_button.disabled:hover {
+  box-shadow: none;
+}
+
+/*Sell Button*/
+.sell_button {
+	width: 75px;
+	background: linear-gradient(135deg, rgb(200, 23, 23), rgb(255, 75, 75));
+	border-radius: 15px;
+	padding: 10px;
+	border: transparent;
+	box-sizing: border-box;
+	font-size-adjust: 2px;
+	transition: box-shadow .3s;
+}
+
+.sell_button:hover {
+	box-shadow: 0px 0px 15px 2px rgb(220, 0, 0);
+}
+
+.sell_button.disabled {
+  background: linear-gradient(135deg, hsl(145, 0%, 35%), hsl(151, 0%, 45%));
+}
+
+.sell_button.disabled:hover {
+  box-shadow: none;
+}
+
+input {
+  width: 45px;
+  padding: 5px;
+  color: lavender;
+  background-color: var(--input_bg);
+  border: 2px, solid, var(--input_border);
+  border-radius: 5px;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+/*Hide input spin buttons*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+
+/*Grid && Items*/
+.grid_container {
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-auto-rows: max-content;
+  justify-items: center;
+  align-self: center;
+  justify-content: center;
+  display: grid;
+  gap: 10px;
+  margin: 15px;
+}
+
+.item {
+  background-color: var(--item_color);
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.img_container {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform .3s;
+}
+
+.img_container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.img_container:hover {
+  transform: scale(1.2); /*If hover 120% zoom*/
+}

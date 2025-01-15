@@ -1,0 +1,160 @@
+/*Main CSS file*/
+
+/*Color variables*/
+
+:root {
+  --item_color: lightsteelblue;
+  --background: beige;
+  --font_color: black;
+  --money_bar_bg: lightgreen;
+  --money_bar_border: rgb(83, 225, 83);
+  --price: rgb(0, 125, 0);
+  --input_bg: #313eae;
+  --input_border: navy;
+  --receipt_bg: lightgray;
+  --receipt_border: darkgray;
+  --receipt_hr: #909090;
+  --message: gray;
+  --menu: darkslateblue;
+  --menu_icon: hsl(250, 80%, 75%);
+  --menu_border: mediumslateblue;
+}
+
+.darkmode {
+  --item_color: darkslateblue;
+  --background: rgb(22, 23, 27);
+  --font_color: lavender;
+  --money_bar_bg: seagreen;
+  --money_bar_border: mediumseagreen;
+  --price: limegreen;
+  --input_bg: #313eae;
+  --input_border: navy;
+  --receipt_bg: dimgray;
+  --receipt_border: gray;
+  --receipt_hr: #909090;
+  --message: silver;
+  --menu: darkslateblue;
+  --menu_icon: hsl(250, 80%, 75%);
+  --menu_border: mediumslateblue;
+}
+
+/*Smooth theme transition*/
+* {
+  transition: color .1s, background-color .75s ease-in-out, border .75s ease-in-out, border-color .75s ease-in-out;
+}
+
+
+/*Smooth Scrolling*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*Background and Fonts*/
+body {
+  background-color: var(--background);
+  color: var(--font_color);
+  margin: 25px;
+  margin-bottom: 25px;
+  font-family: Proxima-Soft;
+  font-weight: bold;
+}
+
+/*Fonts*/
+@font-face {
+  font-family: Proxima-Soft;
+  src: url(../assets/fonts/proxima-soft.ttf);
+}
+
+@font-face {
+  font-family: RobotoMono;
+  src: url(../assets/fonts/RobotoMono-Regular.ttf);
+}
+
+
+/*Default Font Size*/
+p {
+  font-size: 14px;
+}
+
+
+/*Profile Box*/
+.profilebox {
+  margin-top: 20px;
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: center;
+  max-width: 325px;
+}
+
+/*Profile Picture*/
+.pfp {
+  width: 125px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.pfp.shake {
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  5% { transform: translate(-1px, -2px) rotate(-1deg); }
+  10% { transform: translate(-3px, 0px) rotate(1deg); }
+  15% { transform: translate(3px, 2px) rotate(0deg); }
+  20% { transform: translate(1px, -1px) rotate(1deg); }
+  25% { transform: translate(-1px, 2px) rotate(-1deg); }
+  30% { transform: translate(-3px, 1px) rotate(0deg); }
+  35% { transform: translate(3px, 1px) rotate(-1deg); }
+  40% { transform: translate(-1px, -1px) rotate(1deg); }
+  45% { transform: translate(1px, 2px) rotate(0deg); }
+  50% { transform: translate(1px, -2px) rotate(-1deg); }
+  55% { transform: translate(1px, 1px) rotate(0deg); }
+  60% { transform: translate(-1px, -2px) rotate(-1deg); }
+  65% { transform: translate(-3px, 0px) rotate(1deg); }
+  70% { transform: translate(3px, 2px) rotate(0deg); }
+  75% { transform: translate(1px, -1px) rotate(1deg); }
+  80% { transform: translate(-1px, 2px) rotate(-1deg); }
+  85% { transform: translate(-3px, 1px) rotate(0deg); }
+  90% { transform: translate(3px, 1px) rotate(-1deg); }
+  95% { transform: translate(-1px, -1px) rotate(1deg); }
+  100% { transform: translate(1px, 2px) rotate(0deg); }
+}
+
+/*Title*/
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.money_bar {
+  background-color: var(--money_bar_bg);
+  border: 3px, solid, var(--money_bar_border);
+  width: 100%;
+  height: 75px;
+  align-content: center;
+  position: sticky;
+  top: 20px;
+  bottom: 20px;
+  z-index: 1;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+}
+
+/*Money Count*/
+h2 {
+  text-align: center;
+}
+
+/*Credits*/
+h4 {
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 50px;
+  font-size: 10px;
+}
