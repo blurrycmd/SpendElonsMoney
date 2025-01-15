@@ -104,19 +104,19 @@
 
 #icon-dark {
   display: flex;
-  transition: opacity 1s ease-in-out;
+  transition: opacity .75s ease-in-out;
 }
 
 #icon-light {
   display: none;
-  transition: opacity 1s ease-in-out;
+  transition: opacity .75s ease-in-out;
 }
 
 .darkmode #icon-dark {
   display: none;
-  transition: opacity 1s ease-in-out;
+  transition: opacity .75s ease-in-out;
 }
 .darkmode #icon-light {
   display: flex;
-  transition: opacity 1s ease-in-out;
+  transition: opacity .75s ease-in-out;
 }
