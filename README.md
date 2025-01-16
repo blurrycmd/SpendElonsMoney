@@ -13,7 +13,7 @@
 - Buy items from the huge item catalogue with Elon's money!
 - Item catalogue including 44 items you can buy or sell!
 - Receipt at the bottom that shows how many items you bought and the total price of them!
-- Dark/Light mode UI.
+- Dark/Light mode UI (settings stored in local storage).
 - Bar that stays on top of your screen with your current amount of money!
 - Menu buttons for fast navigation and switching themes.
 - Great UI and animations.
