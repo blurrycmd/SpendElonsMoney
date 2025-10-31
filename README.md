@@ -2,7 +2,7 @@
 
 ## 💸 Buy items from the huge item catalogue with Elon's money!
 
-## https://blurrycmd.github.io/SpendElonsMoney/
+## https://itscr24.github.io/SpendElonsMoney/
 
 - Deployed to GitHub Pages! :octocat:
 - Icons and fonts from https://fonts.google.com 
