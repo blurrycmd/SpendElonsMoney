@@ -109,9 +109,9 @@ function sell(price, name, button) {
         updateReceipt();
 
 		// Disable button if you sold your last one just now
-    	if (items[name] && items[name].count <= 0) {
+        if (items[name] && items[name].count <= 0) {
         	button.classList.add('disabled');
-    	}
+        }
 	}
     else {
         button.classList.add('disabled');
